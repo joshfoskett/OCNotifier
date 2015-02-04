@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>OCNotifier</title>
+
+		<link rel="stylesheet" href="../../css/bootstrap.min.css" media="screen">
+		<link rel="stylesheet" href="app.css" media="screen">
+
+		<script type="text/javascript" src="../../js/jquery/jquery.min.js"></script>
+		<script type="text/javascript" src="../../js/localstoragedb.min.js"></script>
+		<script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="../../js/global.js"></script>
+		<script type="text/javascript" src="app.js"></script>
+	</head>
+	<body>
+		<ul class="nav nav-tabs" role="tablist">
+			<li role="presentation" class="active"><a href="#page-maps-playing" role="tab" data-toggle="tab">Maps Playing</a></li>
+			<li role="presentation"><a href="#page-maps-set" role="tab" data-toggle="tab">Select Maps</a></li>
+			<li role="presentation"><a href="#page-options" role="tab" data-toggle="tab">Options</a></li>
+		</ul>
+		<div class="tab-content">
+			<div role="tabpanel" id="page-maps-playing" class="tab-pane active">
+				<div class="loading">
+					<img src="../../img/loading.gif"></img>
+				</div>
+				<div class="map-list-playing">
+					<ul class="list-group">
+					</ul>
+				</div>
+			</div>
+			<div role="tabpanel" id="page-maps-set" class="tab-pane">
+				<input type="text" class="form-control map-search" placeholder="Search for a map?" disabled="disabled">
+				<div id="toggle-maps" class="btn-group btn-group-justified display-none">
+					<a id="maps-all" class="btn btn-info active">All Maps</a>
+					<a id="maps-checked" class="btn btn-info">Favorite Maps</a>
+				</div>
+				<div class="loading">
+					<img src="../../img/loading.gif"></img>
+				</div>
+			    <div class="map-list display-none">
+					<table class="table table-borderless">
+					</table>
+				</div>
+			</div>
+			<div role="tabpanel" id="page-options" class="tab-pane">
+				<div class="well well-sm">
+					<h4>Server Regions</h4>
+					<div class="checkbox">
+					 	<label>
+							<input class="option-region" type="checkbox" value="eu">
+							EU
+						</label>
+					</div>				
+					<div class="checkbox">
+					    <label>
+					        <input class="option-region" type="checkbox" value="us">
+					        US
+					    </label>
+					</div>
+					<h4>Notifications</h4>
+					<div class="checkbox">
+					    <label>
+					        <input class="option-notification" type="checkbox" value="maps">
+					        Recieve notifications when your favorite maps start.
+					    </label>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="love text-center">
+			Made with <span class="heart glyphicon glyphicon-heart"></span> by <a href="#">RastaLulz</a>.
+		</div>
+	</body>
+</html>
